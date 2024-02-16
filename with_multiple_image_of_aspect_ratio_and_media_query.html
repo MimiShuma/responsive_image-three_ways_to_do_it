@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Image - with css object fit property and media query</title>
+    <style>
+        .desktop {
+            width: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        .tab {
+            position: absolute;
+            top: 0;
+            left: 0;
+            visibility: hidden;
+        }
+
+        .phone {
+            position: absolute;
+            top: 0;
+            left: 0;
+            visibility: hidden;
+        }
+
+        @media screen and (max-width:1024px) {
+            .desktop {
+                display: none;
+            }
+
+            .tab {
+                visibility: visible;
+            }
+        }
+
+        @media screen and (max-width:430px) {
+            .tab {
+                display: none;
+            }
+
+            .phone {
+                visibility: visible;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <img src="assets/images/image_desktop.jpg" alt="Man surfing" class="desktop" />
+        <img src="assets/images/image_tab.jpg" alt="Man surfing" class="tab" />
+        <img src="assets/images/image_phone.jpg" alt="Man surfing" class="phone" />
+    </div>
+</body>
+
+</html>
